@@ -11,3 +11,6 @@
 - Thanks to [Alphalaneous](https://github.com/Alphalaneous) for fixing a lot of my bad code :3
 - Cdc for making this mod so I can fork it
 - TJC47 for making such an awesome rebrand of this mod
+- krishy for for emotional support
+- moony for telling me how to build the damn thing
+- monsia for being cool and having a news channel
