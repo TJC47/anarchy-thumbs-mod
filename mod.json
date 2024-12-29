@@ -6,11 +6,11 @@
         "mac": "2.2074"
     },
     "version": "v1.0.8",
-    "id": "cdc.level_thumbnails",
-    "name": "Level Thumbnails",
-    "developer": "cdc",
-    "repository": "https://github.com/cdc-sys/level-thumbs-mod",
-    "description": "Adds thumbnails to levels in search.",
+    "id": "tjc.anarchy_thumbnails",
+    "name": "Anarchy Thumbnails",
+    "developer": "(cdc) UPDATED BY TJC",
+    "repository": "https://github.com/TJC47/anarchy-thumbs-mod",
+    "description": "Adds thumbnails to levels in search. NOW ANARCHY MODE",
 
     "resources": {
         "sprites": [
@@ -21,14 +21,14 @@
 
     "settings": {
         "thumbnailButton": {
-            "name": "Enable Thumbnail Button",
-            "description": "Adds a <cj>button</c> in the <cy>Level Page</c> that lets you view the thumbnail of the level you are currently on.",
+            "name": "Enable Anarchy Thumbnail Button",
+            "description": "Adds a <cj>button</c> in the <cy>Level Page</c> that lets you view the anarchy thumbnail of the level you are currently on.",
             "type": "bool",
             "default": true
         },
         "cache-limit": {
             "name": "Cache Limit",
-            "description": "The amount of thumbnails that are cached in memory (Lower this if you have a low amount of available memory).",
+            "description": "The amount of anarchy thumbnails that are cached in memory (Lower this if you have a low amount of available memory).",
             "type": "int",
             "min": 0,
             "default": 50
