@@ -1,11 +1,13 @@
-# SUBMIT THUMBNAILS IN THE [DISCORD SERVER](https://discord.gg/GuagJDsqds)
+# SUBMIT ANARCHY THUMBNAILS IN THE [DISCORD SERVER]([https://discord.gg/GuagJDsqds](https://discord.gg/SmmQtT3vCb))
 
-# Level Thumbnails
+# Anarchy Thumbnails
 
-**Level Thumbnails** is a mod that adds thumbnails to levels in search.
+**Anarchy Thumbnails** is a mod that adds anarchy thumbnails to levels in search.
 
 # Credits
 
 - Logo by [BriftXD [Twitter]](https://twitter.com/BriftXD)
-- Placeholder on the Thumbnail popup by [Cvolton](https://twitter.com/Misabr0penguin)
+- Placeholder on the Anarchy Thumbnail popup by [Cvolton](https://twitter.com/Misabr0penguin)
 - Thanks to [Alphalaneous](https://github.com/Alphalaneous) for fixing a lot of my bad code :3
+- Cdc for making this mod so I can fork it
+- TJC47 for making such an awesome rebrand of this mod
