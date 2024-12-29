@@ -9,7 +9,7 @@ using namespace geode::prelude;
 #include "ImageCache.hpp"
 
 void ThumbnailPopup::onDownload(CCObject* sender){
-    std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", m_levelID);
+    std::string URL = fmt::format("https://raw.githubusercontent.com/TJC47/anarchythumbs/main/thumbs/{}.png", m_levelID);
     CCApplication::sharedApplication()->openURL(URL.c_str());
 }
 
@@ -17,12 +17,12 @@ void ThumbnailPopup::openDiscordServerPopup(CCObject* sender){
     
     createQuickPopup(
         "Uh Oh!",
-        "Hm.. This level seems to not have a <cj>Thumbnail</c>...\n"
-        "Worry not! You can join our <cg>Discord Server</c> and submit a thumbnail <cy>YOURSELF!</c>",
-        "No Thanks", "JOIN!",
+        "Hm.. This level seems to not have an <cj>Anarchy Thumbnail</c>...\n"
+        "Worry not! You can join our <cg>Discord Server</c> and submit a anarchy thumbnail <cy>YOURSELF!</c>",
+        "No Thanks(Im an L)", "JOIN!(Im a w)",
         [this](auto, bool btn2) {
             if (btn2) {
-                CCApplication::sharedApplication()->openURL("https://discord.gg/GuagJDsqds");
+                CCApplication::sharedApplication()->openURL("https://discord.gg/SmmQtT3vCb");
             }
         }
     );
@@ -100,7 +100,7 @@ bool ThumbnailPopup::setup(int id) {
         return true;
     }
     
-    std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png", m_levelID);
+    std::string URL = fmt::format("https://raw.githubusercontent.com/TJC47/anarchythumbs/main/thumbs/{}.png", m_levelID);
 
     auto req = web::WebRequest();
     m_downloadListener.bind([this](web::WebTask::Event* e){
