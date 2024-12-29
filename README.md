@@ -1,3 +1,3 @@
-# LevelThumbnails
+# AnarchyThumbnails
 
 This is where she makes a mod.
