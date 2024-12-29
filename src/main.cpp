@@ -17,12 +17,12 @@ class $modify(MenuLayer){
         }
         auto flalert = createQuickPopup(
         "Update!",
-        "The <cj>Thumbnails</c> mod has a new <cb>Discord</c> now!\n"
-        "Wanna <cg>join</c> to submit <cy>Thumbnails</c> and <cg>more</c>?",
-        "No Thanks", "JOIN!",
+        "The <cj>Anarchy Thumbnails</c> mod has a<cb>Discord</c>!\n"
+        "Wanna <cg>join</c> to submit <cy>Anarchy Thumbnails</c> and <cg>more stuff like MONSIA ANNOUNCEMENTS</c>?",
+        "No Thanks(Im an L)", "JOIN!(Im a W)",
         [this](auto, bool btn2) {
             if (btn2) {
-                CCApplication::sharedApplication()->openURL("https://discord.gg/GuagJDsqds");
+                CCApplication::sharedApplication()->openURL("https://discord.gg/SmmQtT3vCb");
             }
             Mod::get()->setSavedValue<bool>("temp_newServerNotifOpened",true);
         },false);
@@ -109,7 +109,7 @@ class $modify(MyLevelCell, LevelCell) {
             return;
         }
 
-        std::string URL = fmt::format("https://raw.githubusercontent.com/cdc-sys/level-thumbnails/main/thumbs/{}.png",(int)m_level->m_levelID);
+        std::string URL = fmt::format("https://raw.githubusercontent.com/TJC47/anarchythumbs/main/thumbs/{}.png",(int)m_level->m_levelID);
         int id = m_level->m_levelID.value();
 
         auto req = web::WebRequest();
