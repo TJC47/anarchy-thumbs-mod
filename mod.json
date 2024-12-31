@@ -1,16 +1,19 @@
 {
-    "geode": "4.0.0-beta.1",
+    "geode": "4.1.2",
     "gd": { 
         "win": "2.2074", 
         "android": "2.2074",
         "mac": "2.2074"
     },
-    "version": "v1.0.8",
+    "version": "v1.0.0",
     "id": "tjc.anarchy_thumbnails",
     "name": "Anarchy Thumbnails",
-    "developer": "(cdc) UPDATED BY TJC",
-    "repository": "https://github.com/TJC47/anarchy-thumbs-mod",
-    "description": "Adds thumbnails to levels in search. NOW ANARCHY MODE",
+    "developers": [
+        "cdc",
+        "TJC",
+        "ArcticWoof"
+    ],
+    "description": "Adds Chaotic thumbnails to levels in search.",
 
     "resources": {
         "sprites": [
@@ -39,5 +42,11 @@
         "id": "geode.node-ids",
         "version": ">=1.7.1",
         "importance": "required"
+    }],
+
+    "incompatibilities": [{
+        "id": "cdc.level_thumbnails",
+        "version": ">=1.0.0",
+        "importance": "conflicting"
     }]
 }
