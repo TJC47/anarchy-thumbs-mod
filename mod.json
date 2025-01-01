@@ -35,6 +35,12 @@
             "type": "int",
             "min": 0,
             "default": 50
+        },
+        "wideThumbnails": {
+            "name": "Wide Thumbnails",
+            "description": "Makes the thumbnail image fill up the whole level background",
+            "type": "bool",
+            "default": false
         }
     },
 
