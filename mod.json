@@ -11,7 +11,8 @@
     "developers": [
         "cdc",
         "TJC",
-        "ArcticWoof"
+        "ArcticWoof",
+        "quadruplea"
     ],
     "description": "Adds Chaotic thumbnails to levels in search.",
 
@@ -35,6 +36,12 @@
             "type": "int",
             "min": 0,
             "default": 50
+        },
+        "wideThumbnails": {
+            "name": "Wide Thumbnails",
+            "description": "Makes the thumbnail image fill up the whole level background",
+            "type": "bool",
+            "default": false
         }
     },
 
