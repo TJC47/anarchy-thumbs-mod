@@ -18,7 +18,7 @@ class $modify(MenuLayer){
         auto flalert = createQuickPopup(
         "Update!",
         "The <cj>Anarchy Thumbnails</c> mod has a<cb>Discord</c>!\n"
-        "Wanna <cg>join</c> to submit <cy>Anarchy Thumbnails</c> and more stuff like <cg>MONSIA ANNOUNCEMENTS</c>?",
+        "Wanna <cg>join</c> to submit <cy>Anarchy Thumbnails</c> and <cg>more stuff like MONSIA ANNOUNCEMENTS</c>?",
         "No Thanks(Im an L)", "JOIN!(Im a W)",
         [this](auto, bool btn2) {
             if (btn2) {
@@ -45,20 +45,6 @@ class $modify(MyLevelCell, LevelCell) {
         std::mutex m;
     };
 
-
-    auto value = Mod::get()->getSettingValue<bool>("wideThumbnails");
-
-    if(wideThumbnails == true){
-     m_fields->m_separator->setOpacity(50);
-     angle = 18;
-     m_fields->m_separator->setSkewX(angle*2);
-     m_fields->m_clippingNode->setAnchorPoint({1, 0});
-     m_fields->m_clippingNode->setPosition({m_fields->m_background->getContentSize().width, 0.3f});
-     m_fields->m_clippingNode->setPosition(m_fields->m_clippingNode->getPosition().x + 7, -7.9f);
-    }
-
-
-
     void loadCustomLevelCell() {
         LevelCell::loadCustomLevelCell();
         if(CCLayerColor* bg = this->getChildByType<CCLayerColor>(0)){
@@ -75,9 +61,9 @@ class $modify(MyLevelCell, LevelCell) {
         m_fields->m_loadingIndicator = LoadingCircle::create();
         m_fields->m_loadingIndicator->setParentLayer(this);
 
-        m_fields->m_separator = CCLayerColor::create({0, 0, 0, 0});
+        m_fields->m_separator = CCLayerColor::create({0, 0, 0});
         m_fields->m_separator->setZOrder(-2);
-        m_fields->m_separator->setOpacity(0);
+        m_fields->m_separator->setOpacity(50);
         m_fields->m_separator->setScaleX(0.45f);
         m_fields->m_separator->setVisible(false);	
         m_fields->m_separator->ignoreAnchorPointForPosition(false);
@@ -103,6 +89,22 @@ class $modify(MyLevelCell, LevelCell) {
         retain();
         
         startDownload();
+
+        auto wide = Mod::get()->getSettingValue<bool>("wideThumbnails");
+
+        if(wide == true){
+            m_fields->m_separator = CCLayerColor::create({0, 0, 0, 0});
+            m_fields->m_separator->setOpacity(0);
+            CCLayerColor* rect = CCLayerColor::create({255, 255, 255, 0});
+            float angle = 0;
+            m_fields->m_separator->setSkewX(angle);
+            m_fields->m_clippingNode->setScaleX({3.2f});
+            m_fields->m_clippingNode->setAnchorPoint({0, 0});
+            m_fields->m_clippingNode->setPosition({0.f, 0.3f});
+            m_fields->m_clippingNode->setScaleX(2.342f);
+            m_fields->m_clippingNode->setPosition(-7.f, -7.9f);
+        }
+
     }
 
     //hacky but we have no other choice
@@ -194,9 +196,9 @@ class $modify(MyLevelCell, LevelCell) {
             separatorXMul = 0.75;
         }
 
-        CCLayerColor* rect = CCLayerColor::create({255, 255, 255, 0});
+        CCLayerColor* rect = CCLayerColor::create({255, 255, 255});
         
-        float angle = 0;
+        float angle = 18;
 
         CCSize scaledImageSize = {image->getScaledContentSize().width, image->getContentSize().height * imgScale};
 
@@ -204,16 +206,15 @@ class $modify(MyLevelCell, LevelCell) {
         rect->setContentSize(scaledImageSize);
         rect->setAnchorPoint({1, 0});
         
-        m_fields->m_separator->setSkewX(angle);
+        m_fields->m_separator->setSkewX(angle*2);
         m_fields->m_separator->setContentSize(scaledImageSize);
         m_fields->m_separator->setAnchorPoint({1, 0});
 
         m_fields->m_clippingNode->setStencil(rect);
         m_fields->m_clippingNode->addChild(image);
         m_fields->m_clippingNode->setContentSize(scaledImageSize);
-        m_fields->m_clippingNode->setScaleX({3.2f});
-        m_fields->m_clippingNode->setAnchorPoint({0, 0});
-        m_fields->m_clippingNode->setPosition({0.f, 0.3f});
+        m_fields->m_clippingNode->setAnchorPoint({1, 0});
+        m_fields->m_clippingNode->setPosition({m_fields->m_background->getContentSize().width, 0.3f});
 
         float scale =  m_fields->m_background->getContentSize().height / m_fields->m_clippingNode ->getContentSize().height;
 
@@ -240,11 +241,9 @@ class $modify(MyLevelCell, LevelCell) {
 
         m_fields->m_separator->setScaleX(0.45 * dailyMult);
         m_fields->m_separator->setScaleY(dailyMult);
-        m_fields->m_separator->setOpacity(0);
         m_fields->m_separator->setPosition({m_fields->m_background->getContentSize().width - (m_fields->m_separator->getContentSize().width * dailyMult)/2 - 20 + 7, -7.9f});
         m_fields->m_clippingNode->setScale(dailyMult);
-        m_fields->m_clippingNode->setScaleX(2.342f);
-        m_fields->m_clippingNode->setPosition(-7.f, -7.9f);
+        m_fields->m_clippingNode->setPosition(m_fields->m_clippingNode->getPosition().x + 7, -7.9f);
 
         DailyLevelNode* dln = typeinfo_cast<DailyLevelNode*>(getParent());
 
