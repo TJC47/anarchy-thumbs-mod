@@ -18,7 +18,7 @@ class $modify(MenuLayer){
         auto flalert = createQuickPopup(
         "Update!",
         "The <cj>Anarchy Thumbnails</c> mod has a<cb>Discord</c>!\n"
-        "Wanna <cg>join</c> to submit <cy>Anarchy Thumbnails</c> and <cg>more stuff like MONSIA ANNOUNCEMENTS</c>?",
+        "Wanna <cg>join</c> to submit <cy>Anarchy Thumbnails</c> and more stuff like <cg>MONSIA ANNOUNCEMENTS</c>?",
         "No Thanks(Im an L)", "JOIN!(Im a W)",
         [this](auto, bool btn2) {
             if (btn2) {
@@ -44,6 +44,20 @@ class $modify(MyLevelCell, LevelCell) {
         Ref<CCImage> m_image;
         std::mutex m;
     };
+
+
+    auto value = Mod::get()->getSettingValue<bool>("wideThumbnails");
+
+    if(wideThumbnails == true){
+     m_fields->m_separator->setOpacity(50);
+     angle = 18;
+     m_fields->m_separator->setSkewX(angle*2);
+     m_fields->m_clippingNode->setAnchorPoint({1, 0});
+     m_fields->m_clippingNode->setPosition({m_fields->m_background->getContentSize().width, 0.3f});
+     m_fields->m_clippingNode->setPosition(m_fields->m_clippingNode->getPosition().x + 7, -7.9f);
+    }
+
+
 
     void loadCustomLevelCell() {
         LevelCell::loadCustomLevelCell();
