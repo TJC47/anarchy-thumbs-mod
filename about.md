@@ -13,4 +13,4 @@
 - TJC47 for making such an awesome rebrand of this mod
 - krishy for for emotional support
 - moony for telling me how to build the damn thing
-- monsia for being cool and having a news channel
+
